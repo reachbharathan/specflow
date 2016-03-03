@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using NUnit.Framework;
+using System.Threading;
+using MbUnit.Framework;
 using TechTalk.SpecFlow;
 
 namespace SeleniumSpecflow.Steps
@@ -38,7 +39,16 @@ namespace SeleniumSpecflow.Steps
         {
             Console.Write("Adding two Numbers");
             Result = Num1 + Num2;
+            Thread.Sleep(30000);
         }
+
+        [When(@"I press subract")]
+        public void WhenIPressSubract()
+        {
+            Console.Write("Adding two Numbers");
+            Result = Num1 - Num2;
+        }
+
 
         [Then("the result should be (.*) on the screen")]
         public void ThenTheResultShouldBe(int result)
