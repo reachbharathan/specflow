@@ -9,19 +9,23 @@
 //  </auto-generated>
 // ------------------------------------------------------------------------------
 #region Designer generated code
+
+using NUnit.Framework;
+
 #pragma warning disable
 namespace SeleniumSpecflow.Features
 {
     using TechTalk.SpecFlow;
-    
-    
+
+    [TestFixture]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [MbUnit.Framework.TestFixtureAttribute()]
-    [MbUnit.Framework.DescriptionAttribute(null)]
-    [MbUnit.Framework.CategoryAttribute("Subract")]
-    [MbUnit.Framework.CategoryAttribute("Calc")]
-    [MbUnit.Framework.ParallelizableAttribute()]
+    [NUnit.Framework.TestFixtureAttribute()]
+    [NUnit.Framework.DescriptionAttribute("Calculator Subract")]
+    [NUnit.Framework.CategoryAttribute("Subract")]
+    [NUnit.Framework.CategoryAttribute("Calc")]
+    [Parallelizable]
+
     public partial class CalculatorSubractFeature
     {
         
@@ -30,29 +34,29 @@ namespace SeleniumSpecflow.Features
 #line 1 "Subract.feature"
 #line hidden
         
-        [MbUnit.Framework.FixtureSetUpAttribute()]
+        [NUnit.Framework.TestFixtureSetUpAttribute()]
         public virtual void FeatureSetup()
         {
-            testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
+            testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Calculator Subract", null, ProgrammingLanguage.CSharp, new string[] {
                         "Subract",
                         "Calc"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
-        [MbUnit.Framework.FixtureTearDownAttribute()]
+        [NUnit.Framework.TestFixtureTearDownAttribute()]
         public virtual void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();
             testRunner = null;
         }
         
-        [MbUnit.Framework.SetUpAttribute()]
+        [NUnit.Framework.SetUpAttribute()]
         public virtual void TestInitialize()
         {
         }
         
-        [MbUnit.Framework.TearDownAttribute()]
+        [NUnit.Framework.TearDownAttribute()]
         public virtual void ScenarioTearDown()
         {
             testRunner.OnScenarioEnd();
@@ -68,9 +72,9 @@ namespace SeleniumSpecflow.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [MbUnit.Framework.TestAttribute()]
-        [MbUnit.Framework.DescriptionAttribute("Subract two numbers")]
-        [MbUnit.Framework.CategoryAttribute("subtract")]
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Subract two numbers")]
+        [NUnit.Framework.CategoryAttribute("subtract")]
         public virtual void SubractTwoNumbers()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Subract two numbers", new string[] {
@@ -84,14 +88,14 @@ this.ScenarioSetup(scenarioInfo);
 #line 8
  testRunner.When("I press subract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
- testRunner.Then("the result should be 150 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the result should be 10 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [MbUnit.Framework.TestAttribute()]
-        [MbUnit.Framework.DescriptionAttribute("Subract same two numbers")]
-        [MbUnit.Framework.CategoryAttribute("subtract")]
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Subract same two numbers")]
+        [NUnit.Framework.CategoryAttribute("subtract")]
         public virtual void SubractSameTwoNumbers()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Subract same two numbers", new string[] {
@@ -105,7 +109,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 15
  testRunner.When("I press subract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 16
- testRunner.Then("the result should be 120 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the result should be 0 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
